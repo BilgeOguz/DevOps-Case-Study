@@ -6,7 +6,7 @@ metadata:
     app: db
   name: db
   namespace: default
-  resourceVersion: "41455"
+  resourceVersion: "46324"
   uid: 8a7ec262-befb-4180-97f3-2d55333e5d40
 spec:
   clusterIP: 10.105.39.79
@@ -17,9 +17,9 @@ spec:
   - IPv4
   ipFamilyPolicy: SingleStack
   ports:
-  - port: 3306
+  - port: 5432
     protocol: TCP
-    targetPort: 3306
+    targetPort: 5432
   selector:
     app: db
   sessionAffinity: None
