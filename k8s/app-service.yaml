@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2026-09-12T15:26:07Z"
+  labels:
+    app: petclinic-demo
+  name: petclinic-svc
+  namespace: default
+  resourceVersion: "41625"
+  uid: 391edb41-9414-43cc-ab91-4662b2d184cb
+spec:
+  clusterIP: 10.111.73.211
+  clusterIPs:
+  - 10.111.73.211
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 32602
+    port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: petclinic-demo
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
