@@ -1,9 +1,9 @@
 services:
   petclinic:
-  build:
-    context: ./app/spring-petclinic        
-    dockerfile: Dockerfile    
-  image: petclinic:latest
+    build:
+      context: ./app/spring-petclinic        
+      dockerfile: Dockerfile    
+    image: petclinic:latest
     ports:
       - "8080:8080"
     environment:

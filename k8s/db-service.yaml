@@ -1,28 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  creationTimestamp: "2026-09-12T15:23:17Z"
   labels:
     app: db
   name: db
-  namespace: default
-  resourceVersion: "46324"
-  uid: 8a7ec262-befb-4180-97f3-2d55333e5d40
 spec:
-  clusterIP: 10.105.39.79
-  clusterIPs:
-  - 10.105.39.79
-  internalTrafficPolicy: Cluster
-  ipFamilies:
-  - IPv4
-  ipFamilyPolicy: SingleStack
   ports:
   - port: 5432
     protocol: TCP
     targetPort: 5432
   selector:
     app: db
-  sessionAffinity: None
   type: ClusterIP
-status:
-  loadBalancer: {}
